@@ -1,0 +1,194 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialised;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Mulish';
+
+  --color-base-blue:#065E7C;
+  --color-base-white:#FFFFFF;
+  --color-base-bege: #D9D9D9;
+  --color-base-titulosh1:#202024;
+  --color-base-textosp:#121214;
+  --color-base-bluefooter:#387E96;
+}
+
+body {
+  width: 100vw;
+}
+
+
+header {
+  background-color: var(--color-base-blue);
+
+  display: flex;
+ 
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 72px;
+  padding: 0 1.6rem; 
+}
+
+.logo  {
+  background-color: var(--color-base-white);
+  align-self: center;
+
+  width: 4.0rem;
+  height: 4.0rem;
+  border-radius: 50%;
+  
+  margin-left: 2.8rem;
+  padding: .8rem;
+}
+
+.input-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.input-wrapper input {
+  width: 100%;
+  margin: 1.6rem;
+  height: 4.0rem;
+  background-color: var(--color-base-white);
+  opacity: 0.2; 
+  border-radius: 0.4rem;
+  padding: 0 1rem; /* padding para o texto dentro do input */
+  font-size: 1.6rem;
+}
+
+.input-wrapper input::placeholder {
+  color: var(--color-base-bege); /* Cor branca para o texto placeholder */
+}
+
+header .avatar img {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.picture img {
+  width: 100%;
+  height: auto; /* Ajusta a altura automaticamente*/
+  overflow: hidden;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 2.4rem; 
+  font-weight: 700;
+  padding: 3.1rem 6.6rem  .8rem 2.2rem;
+ }
+
+ .buttons {
+  display: flex;
+  gap: 1.2rem;
+ }
+
+ .buttons button {
+  width: auto;
+  height: auto;
+
+  border: none;
+  border-radius: 50%;
+  padding-bottom: 3.1rem;
+  background: none;
+}
+
+.buttons img {
+display: block;
+}
+
+
+.buttons .like button {
+  padding-left: 2.2rem;
+}
+
+main p {
+font-size: 1.6rem;
+font-weight: 400;
+padding-left: 2.2rem;
+padding-right: 2.6rem;
+
+margin: 0 auto; /* Centraliza o parágrafo */
+width: 100%; /* Define a largura do parágrafo como 90% da largura do container */
+max-width: 100%;
+}
+
+sidebar h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  padding-bottom: 0rem;
+}
+
+sidebar img {
+  width: 15.1rem;
+  height: 8.4rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.photos  {
+  width: 100%;
+  padding-top: 3.2rem;
+  padding-right: 2.6rem;
+  padding-bottom: 0rem;
+  padding-left: 2.2rem;
+}
+
+p {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding-bottom: 1.3rem;
+}
+
+
+.photos {
+  display: flex;
+  align-items: flex-start;
+}
+
+.img-slide {
+  margin-right: 1.6rem;
+  margin-top: .2rem;
+}
+
+.legendas {
+  max-width: calc(100% - 16.6rem); /* Ajusta a largura máxima para a largura restante */
+}
+
+footer {
+  max-width: 100%;
+  background-color: var(--color-base-bluefooter);
+  height: 6.4rem;
+  margin-top: 3.9rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-base-white);
+}
+/* Estilos específicos para DESKTOPP */
+@media (min-width: 700px) {}
+ 
