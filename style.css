@@ -21,6 +21,8 @@
 
 body {
   width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -72,6 +74,7 @@ header {
 header .avatar img {
   width: 4.2rem;
   height: 4.2rem;
+  margin-right: 2.8rem;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -108,7 +111,6 @@ h1 {
 display: block;
 }
 
-
 .buttons .like button {
   padding-left: 2.2rem;
 }
@@ -124,13 +126,13 @@ width: 100%; /* Define a largura do parágrafo como 90% da largura do container 
 max-width: 100%;
 }
 
-sidebar h1 {
+.sidebar h1 {
   font-size: 2.4rem;
   font-weight: 700;
   padding-bottom: 0rem;
 }
 
-sidebar img {
+.sidebar img {
   width: 15.1rem;
   height: 8.4rem;
   border-radius: .5rem;
@@ -146,49 +148,128 @@ sidebar img {
   padding-left: 2.2rem;
 }
 
-p {
-  font-size: 1.4rem;
+.paragraph p {
+  font-size: 1.6rem;
   font-weight: 400;
+  margin: 0rem 2.6rem 1.4rem 0rem;
 }
 
-h2 {
+main h2 {
+  width: 100%;
   font-size: 1.8rem;
   font-weight: 700;
   padding-bottom: 1.3rem;
 }
 
-
-.photos {
+aside .photos {
   display: flex;
   align-items: flex-start;
 }
 
-.img-slide {
+.img-slide img {
   margin-right: 1.6rem;
-  margin-top: .2rem;
+  margin-top: .8rem;
 }
 
-.legendas {
-  max-width: calc(100% - 16.6rem); /* Ajusta a largura máxima para a largura restante */
+aside .sidebar p {
+  max-width: calc(100% - 1.6rem); /* Ajuste conforme necessário */
 }
 
-footer {
-  max-width: 100%;
-  background-color: var(--color-base-bluefooter);
+p {
+  font-size: 1.4rem;
+  }
+
+  h2 {
+    margin-top: 1.0rem;
+    margin-bottom: 1.4rem;
+  }
+
+
+.footer footer {
+  width: 100%;
+  background: var(--color-base-bluefooter);
   height: 6.4rem;
   margin-top: 3.9rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-footer p {
-
+/* Estilo para o texto do footer */
+footer {
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--color-base-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
-/* Estilos específicos para DESKTOPP */
-@media (min-width: 700px) {}
- 
+
+/* VERSÃO DESKTOP */
+@media (min-width: 700px) 
+{
+
+  .main-containerpai {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 3 partes para o main e 1 parte para a sidebar */
+    gap: 3.4rem; /* Espaço entre o main e a sidebar */
+  }
+
+  main {
+    /* Adiciona margens apropriadas se necessário */
+    margin-left:10.9rem;
+    margin-top: 4.4rem;
+  }
+
+  .picture img {
+    width: 100%; /* Faz com que a imagem ocupe 100% do container disponível */
+    height: auto;
+    border-radius:.5rem;
+  }
+
+  .containertituloebotoes {
+    display: flex;
+    align-items: center;
+  }
+
+  main h1 {
+    font-size: 2.4rem;
+  }
+
+  aside .sidebar {
+    padding-right: 11.0rem;
+    min-width: 3.83rem;
+    min-height: 8.4rem;
+  }
+
+  .legendas {
+    min-width: 21.5rem;
+    min-height: 5.4rem;
+  }
+
+  h2 {
+    margin-top: 0.5rem;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 4.0rem;
+    margin-right: 3.4rem;
+  }
+
+  .buttons button {
+    border: none;
+    border-radius: 50%;
+    background: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .paragraph p {
+    font-size: 1.6rem;
+    margin: 0; /* Remove margens adicionais se necessário */
+  }
+
+}
