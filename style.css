@@ -17,6 +17,7 @@
   --color-base-titulosh1:#202024;
   --color-base-textosp:#121214;
   --color-base-bluefooter:#387E96;
+  --color-base-input: hsl(0, 0%, 100%);
 }
 
 body {
@@ -60,15 +61,21 @@ header {
   width: 100%;
   margin: 1.6rem;
   height: 4.0rem;
-  background-color: var(--color-base-white);
-  opacity: 0.2; 
-  border-radius: 0.4rem;
+  background-color:hsla(0, 50%, 100%, 0.420); /* azul com 10% de opacidade */
+  
+  border-radius: .4rem;
   padding: 0 1rem; /* padding para o texto dentro do input */
   font-size: 1.6rem;
-}
+  width: 600;
+  border: none;
+ }
 
 .input-wrapper input::placeholder {
-  color: var(--color-base-bege); /* Cor branca para o texto placeholder */
+  color: var(--color-base-white); /* Cor branca para o texto placeholder */
+  
+  font-family: 'Mulish';
+  font-size: 1.6rem;
+  width: 600;
 }
 
 header .avatar img {
@@ -84,6 +91,10 @@ header .avatar img {
   height: auto; /* Ajusta a altura automaticamente*/
   overflow: hidden;
   object-fit: cover;
+}
+
+.picture img:hover {
+  transform: scale(1.05); /* Aumenta a imagem em 5% ao passar o mouse */
 }
 
 h1 {
@@ -140,6 +151,8 @@ max-width: 100%;
   object-fit: cover;
 }
 
+
+
 .photos  {
   width: 100%;
   padding-top: 3.2rem;
@@ -169,6 +182,13 @@ aside .photos {
 .img-slide img {
   margin-right: 1.6rem;
   margin-top: .8rem;
+  transition: transform 0.1s ease-in-out;
+  }
+
+.img-slide img:hover {
+  transform: scale(1.02) translatey(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+
 }
 
 aside .sidebar p {
@@ -228,7 +248,8 @@ footer {
 
   .containertituloebotoes {
     display: flex;
-    align-items: center;
+    justify-content: space-between
+
   }
 
   main h1 {
@@ -248,12 +269,17 @@ footer {
 
   h2 {
     margin-top: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.4rem;
   }
 
   .buttons {
     display: flex;
     gap: 1.2rem;
-    margin-top: 4.0rem;
+    margin-top: 3.1rem;
     margin-right: 3.4rem;
   }
 
