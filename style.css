@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0%;
   padding: 0%;
@@ -11,30 +13,24 @@
   font-size: 62.5%;
   font-family: 'Mulish';
 
-  --color-base-blue:#065E7C;
-  --color-base-white:#FFFFFF;
-  --color-base-bege: #D9D9D9;
-  --color-base-titulosh1:#202024;
-  --color-base-textosp:#121214;
-  --color-base-bluefooter:#387E96;
-  --color-base-input: hsl(0, 0%, 100%);
+  --color-base-blue:hsl(195, 91%, 25%);
+  --color-base-white:hsl(0, 0%, 100%);
+  --color-base-bege: hsl(0, 0%, 85%);
+  --color-base-titulosh1:hsl(240, 6%, 13%);
+  --color-base-textosp:hsl(240, 5%, 7%);
+  --color-base-bluefooter:hsl(195, 46%, 40%);
 }
 
 body {
   width: 100vw;
-  margin: 0;
-  padding: 0;
 }
-
 
 header {
   background-color: var(--color-base-blue);
 
   display: flex;
- 
   align-items: center;
-  justify-content: space-between;
-
+  
   width: 100%;
   height: 72px;
   padding: 0 1.6rem; 
@@ -63,8 +59,8 @@ header {
   height: 4.0rem;
   background-color:hsla(0, 50%, 100%, 0.420); /* azul com 10% de opacidade */
   
-  border-radius: .4rem;
-  padding: 0 1rem; /* padding para o texto dentro do input */
+  border-radius: 0.4rem;
+  padding: 1.4rem; /* padding para o texto dentro do input */
   font-size: 1.6rem;
   width: 600;
   border: none;
@@ -100,47 +96,45 @@ header .avatar img {
 h1 {
   font-size: 2.4rem; 
   font-weight: 700;
-  padding: 3.1rem 6.6rem  .8rem 2.2rem;
+  padding: 3.1rem 6.6rem .8rem 2.2rem;
+  margin-top: 1%;
  }
 
  .buttons {
   display: flex;
   gap: 1.2rem;
- }
+}
 
  .buttons button {
   width: auto;
   height: auto;
+  background: none;
 
   border: none;
   border-radius: 50%;
-  padding-bottom: 3.1rem;
-  background: none;
-}
-
-.buttons img {
-display: block;
-}
-
-.buttons .like button {
-  padding-left: 2.2rem;
-}
-
-main p {
-font-size: 1.6rem;
-font-weight: 400;
-padding-left: 2.2rem;
-padding-right: 2.6rem;
-
-margin: 0 auto; /* Centraliza o parágrafo */
-width: 100%; /* Define a largura do parágrafo como 90% da largura do container */
-max-width: 100%;
-}
-
-.sidebar h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
   padding-bottom: 0rem;
+
+  position: relative;
+  display: flex;
+  left: 3.4rem;
+
+  transition: box-shadow 0.3s ease-in-out; /* Adiciona uma transição suave, com sombreado*/
+  cursor: pointer; /* Adiciona um cursor pointer para indicar que é clicável */
+}
+
+.buttons button:hover {
+  box-shadow: 0 4px 2px rgba(75, 75, 177, 0.5); 
+}
+
+ main p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding-left: 2.2rem;
+  padding-right: 2.6rem;
+  
+  margin: 0 auto; /* Centraliza o parágrafo */
+  width: 100%; /* Define a largura do parágrafo como 90% da largura do container */
+  max-width: 100%;
 }
 
 .sidebar img {
@@ -151,45 +145,43 @@ max-width: 100%;
   object-fit: cover;
 }
 
-
-
-.photos  {
-  width: 100%;
-  padding-top: 3.2rem;
-  padding-right: 2.6rem;
-  padding-bottom: 0rem;
-  padding-left: 2.2rem;
-}
-
-.paragraph p {
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0rem 2.6rem 1.4rem 0rem;
-}
-
-main h2 {
-  width: 100%;
-  font-size: 1.8rem;
-  font-weight: 700;
-  padding-bottom: 1.3rem;
-}
-
 aside .photos {
   display: flex;
   align-items: flex-start;
 }
 
+.photos  {
+  width: 100%;
+  padding-bottom: 2.5rem;
+  padding-top: 3.0rem;
+  padding-right: 2.6rem;
+  padding-left: 2.2rem;
+  }
+
+.paragraph p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 3.0rem 2.6rem 2.2rem 0rem;
+}
+/*SIDEBAR - PARTE DAS FOTOS */
+
+.sidebar h2 {
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding-bottom: 1.0rem;
+}
 .img-slide img {
   margin-right: 1.6rem;
-  margin-top: .8rem;
+  margin-top: 1.8rem;
   transition: transform 0.1s ease-in-out;
   }
 
 .img-slide img:hover {
   transform: scale(1.02) translatey(-5px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-
 }
+
 
 aside .sidebar p {
   max-width: calc(100% - 1.6rem); /* Ajuste conforme necessário */
@@ -197,11 +189,12 @@ aside .sidebar p {
 
 p {
   font-size: 1.4rem;
+  max-width: 100%;
   }
 
-  h2 {
-    margin-top: 1.0rem;
-    margin-bottom: 1.4rem;
+h2 {
+  margin-bottom: .2rem;
+  padding-top: 1rem;
   }
 
 
@@ -228,6 +221,32 @@ footer {
 @media (min-width: 700px) 
 {
 
+  /* EXEMPLO APLICANDO GRID AREA
+  
+  .main-containerpai {
+
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer"
+
+    header {
+     grid-area:header; (assim ir citando cada area para se posicionarem)
+    }    
+    main {
+      grid-area: main;
+    }
+    
+    aside {
+      grid-area: aside;
+    }
+
+    footer {
+      grid-area: footer; 
+    }
+  }*/
+  
   .main-containerpai {
     display: grid;
     grid-template-columns: 3fr 1fr; /* 3 partes para o main e 1 parte para a sidebar */
@@ -235,7 +254,6 @@ footer {
   }
 
   main {
-    /* Adiciona margens apropriadas se necessário */
     margin-left:10.9rem;
     margin-top: 4.4rem;
   }
@@ -249,17 +267,26 @@ footer {
   .containertituloebotoes {
     display: flex;
     justify-content: space-between
-
   }
 
-  main h1 {
-    font-size: 2.4rem;
-  }
+
+
+/*PARTE DO SIDEBAR FOTOS*/
+
+  h1 {
+   font-size: 2.4rem;
+   padding-bottom: 2.4rem;
+}
 
   aside .sidebar {
     padding-right: 11.0rem;
+    padding-top: 4.4rem;
     min-width: 3.83rem;
     min-height: 8.4rem;
+  }
+
+  .photos {
+    padding-top: 0rem;
   }
 
   .legendas {
@@ -270,10 +297,12 @@ footer {
   h2 {
     margin-top: 0.5rem;
     font-size: 1.8rem;
+    width: 700;
   }
 
   p {
     font-size: 1.4rem;
+    width: 400;
   }
 
   .buttons {
@@ -297,5 +326,4 @@ footer {
     font-size: 1.6rem;
     margin: 0; /* Remove margens adicionais se necessário */
   }
-
 }
