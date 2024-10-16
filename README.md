@@ -1,6 +1,6 @@
 # Blog de Gatos
 
-Desafio do curso Explorer da Rocketseat para aplicar grid, responsividade e animações.
+Desafio para praticar a aplicação do grid, responsividade e animações.
 
 Versões presentes: 
 
